@@ -14,7 +14,7 @@
 git clone git@github.com:ToBeNumerOne/tool-uglify.git
 ```
 
-### 2、将项目的根目录放在origin文件夹下面
+### 2、将项目的根目录放在entry文件夹下面
 
 ### 3、安装依赖
 
