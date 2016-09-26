@@ -11,5 +11,5 @@ requireDir('./gulp/tasks', {
 });
 
 gulp.task('default', [
-    'compress:js'
+    'del'
 ]);

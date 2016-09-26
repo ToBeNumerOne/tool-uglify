@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     gulpif = require('gulp-if'),
     config = require('../babel.config');
 
-gulp.task('babel:es6', function () {
+gulp.task('babel:es6', ['copy'],function () {
   return gulp.src('./middle/**/*.*')
       .pipe(gulpif('*.js', babel(config)))
       .pipe(gulp.dest('./target'))

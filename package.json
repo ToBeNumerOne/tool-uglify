@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "bak": "gulp copy",
-    "start": "gulp"
+    "start": "rm -rf target/* && gulp"
   },
   "keywords": [],
   "author": "",

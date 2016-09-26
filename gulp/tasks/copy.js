@@ -8,11 +8,16 @@ var ncp = require('ncp').ncp
 // 设置最大并发数是16
 ncp.limit = 16;
 
-gulp.task('copy',function () {
-  ncp('./entry', './middle', function (err) {
-    if (err){
-      return console.error(err);
-    }
-    console.log('done!');
-  });
+//gulp.task('copy',function () {
+//  ncp('./entry', './middle', function (err) {
+//    if (err){
+//      return console.error(err);
+//    }
+//    console.log('done!');
+//  });
+//});
+
+gulp.task('copy', function(){
+  return gulp.src('./entry/**/*.*')
+      .pipe(gulp.dest('./middle'))
 });
