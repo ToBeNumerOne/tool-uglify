@@ -44,7 +44,7 @@ module.exports = config;
 npm install
 ```
 
-### 4、备份源项目
+### 5、备份源项目
 
 备份之后的项目会出现在middle文件夹下
 
@@ -52,7 +52,7 @@ npm install
 npm run bak
 ```
 
-### 5、混淆代码
+### 6、混淆代码
 
 ```
 npm start
