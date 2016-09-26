@@ -4,18 +4,11 @@
  */
 var gulp = require('gulp'),
     babel = require('gulp-babel'),
-    gulpif = require('gulp-if');
+    gulpif = require('gulp-if'),
+    config = require('../babel.config');
 
 gulp.task('babel:es6', function () {
   return gulp.src('./middle/**/*.*')
-      .pipe(gulpif('*.js', babel({
-        presets:[
-          'es2015',
-          'react'
-        ],
-        plugins: [
-          'transform-class-properties'
-        ]
-      })))
+      .pipe(gulpif('*.js', babel(config)))
       .pipe(gulp.dest('./target'))
 });
