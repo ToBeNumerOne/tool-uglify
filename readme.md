@@ -14,9 +14,31 @@
 git clone git@github.com:ToBeNumerOne/tool-uglify.git
 ```
 
-### 2、将项目(排除node_modules)的根目录放在entry文件夹下面
+### 2、配置babel
+在gulp/babel.config.js中配置babel。首先通过npm install安装babel所需要的依赖。
 
-### 3、安装依赖
+配置时依据项目架构，配置babel的presets和plugins等选项。此文件最终导出一个有关babel的配置对象。相关配置例如：
+
+```javascript
+const config = {
+    presets:[
+        'es2015',
+        'react',
+        'stage-0'
+    ],
+    plugins: [
+        'transform-class-properties',
+        'add-module-exports',
+        'transform-decorators-legacy'
+    ],
+    compact: true
+};
+module.exports = config;
+```
+
+### 3、将项目(排除node_modules)的根目录放在entry文件夹下面
+
+### 4、安装依赖
 
 ```
 npm install
